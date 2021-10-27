@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #f9f9f9;
+  font-family: "roboto", sans-serif;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  padding: 10px 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+}
+
+.video-card {
+  height: 258px;
+  width: 273px;
+  padding: 10px;
+  position: relative;
+  margin-left: 300px;
+  margin-top: 200px;
+}
+
+.video-card .duration {
+  background-color: #1f1f1f;
+  width: 40px;
+  height: 18px;
+  text-align: center;
+  color: white;
+  border-radius: 3px;
+  position: absolute;
+  top: 130px;
+  right: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.video-card .watch-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 4px 4px;
+  opacity: 0.8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 3px;
+  display: none;
+}
+
+.video-card .playlistadd-icon {
+  position: absolute;
+  top: 48px;
+  right: 15px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  opacity: 0.8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 3px;
+  padding: 4px 4px;
+  display: none;
+}
+
+.video-card:hover .watch-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.video-card:hover .playlistadd-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.video-card:hover .video-data .user-channel .video-details .video-content .more-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.video-card .thumbnail-video {
+  height: 142px;
+  width: 253px;
+  padding: 0;
+  margin-bottom: -5px;
+  cursor: pointer;
+}
+
+.video-card .video-data {
+  padding: 12px 12px 0 0;
+  width: 253px;
+}
+
+.video-card .video-data .user-channel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.video-card .video-data .user-channel .user-video-icon {
+  margin: 0 12px 0 0;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.video-card .video-data .user-channel .video-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 12px 10px 0px;
+}
+
+.video-card .video-data .user-channel .video-details .video-content {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.video-card .video-data .user-channel .video-details .video-content h5 {
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: normal;
+  width: 175px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.video-card .video-data .user-channel .video-details .video-content .more-icon {
+  color: #838383;
+  display: none;
+}
+
+.video-card .video-data .user-channel .video-details .video-content .more-icon:hover {
+  color: #535353;
+  cursor: pointer;
+}
+
+.video-card .video-data .user-channel .video-details .channel-name {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.video-card .video-data .user-channel .video-details p {
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+}
+/*# sourceMappingURL=video-card.css.map */

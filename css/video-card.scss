@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f9f9f9;
+  font-family: "roboto", sans-serif;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  padding: 10px 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+}
+
+// video card
+.video-card {
+  height: 258px;
+  width: 273px;
+  padding: 10px;
+  position: relative;
+
+  margin-left: 300px;
+  margin-top: 200px;
+  //   background-color: white;
+
+  .duration {
+    background-color: rgb(31, 31, 31);
+    width: 40px;
+    height: 18px;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    position: absolute;
+    top: 130px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+
+  .watch-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 4px 4px;
+    opacity: 0.8;
+    align-items: center;
+    border-radius: 3px;
+    display: none;
+  }
+
+  .playlistadd-icon {
+      position: absolute;
+      top: 48px;
+      right: 15px;
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      opacity: 0.8;
+      align-items: center;
+      border-radius: 3px;
+      padding: 4px 4px;
+      display: none;
+  }
+
+  &:hover .watch-icon {
+      display: flex;
+      cursor: pointer;
+    }
+    
+    &:hover .playlistadd-icon {
+        display: flex;
+        cursor: pointer;
+  }
+
+  &:hover .video-data .user-channel .video-details .video-content .more-icon {
+      display: flex;
+  }
+
+  .thumbnail-video {
+    height: 142px;
+    width: 253px;
+    padding: 0;
+    margin-bottom: -5px;
+    cursor: pointer;
+  }
+
+  .video-data {
+    padding: 12px 12px 0 0;
+    width: 253px;
+
+    .user-channel {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+
+      .user-video-icon {
+        margin: 0 12px 0 0;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .video-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 12px 10px 0px;
+
+        .video-content {
+          height: 40px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          h5 {
+            line-height: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            font-size: normal;
+            width: 175px;
+            cursor: pointer;
+
+            color: #000000;
+          }
+
+          .more-icon {
+              color: rgb(131,131,131);
+              display: none;
+
+              &:hover {
+                  color: rgb(83,83,83);
+                  cursor: pointer;
+              }
+          }
+        }
+
+        .channel-name {
+          margin-top: 1px;
+          margin-bottom: 1px;
+        }
+
+        p {
+          font-size: 14px;
+          color: gray;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
