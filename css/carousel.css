@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: linear-gradient(330deg, #fd880b 40%, #f3b519);
+}
+
+.container {
+  width: 900px;
+  padding: 1rem;
+}
+
+.container h2 {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.container .carousel--container {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background: -webkit-gradient(linear, right top, left top, from(#f3b519), to(#fd880b));
+  background: linear-gradient(270deg, #f3b519, #fd880b);
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.container .carousel--container:hover {
+  overflow-x: auto;
+}
+
+.container .carousel--container .carousel--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container .carousel--container .carousel--content .box {
+  width: 180px;
+  background: #ffffff;
+  margin-right: 1rem;
+  padding: 1.2rem;
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 3px 15px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container .carousel--container .controls .btn {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(-50%) scale(0.5);
+          transform: translateY(-50%) scale(0.5);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container .carousel--container .controls .btn.show {
+  -webkit-transform: translateY(-50%) scale(0.5);
+          transform: translateY(-50%) scale(0.5);
+  opacity: 1;
+  visibility: visible;
+}
+
+.container .carousel--container .controls .btn.left {
+  left: 0.5rem;
+}
+
+.container .carousel--container .controls .btn.right {
+  right: 0.5rem;
+}
+/*# sourceMappingURL=carousel.css.map */
