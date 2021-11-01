@@ -1,5 +1,7 @@
 .app .sidebar {
+  position: fixed;
   background-color: #fff;
+  z-index: 2025;
 }
 
 .app .sidebar .sidebar-space {
@@ -19,6 +21,7 @@
 }
 
 .app .sidebar .sidebar__content .sidebar__content__items {
+  background: #fff;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -29,9 +32,11 @@
 
 .app .sidebar .sidebar__content .sidebar__content__items:hover {
   overflow-y: scroll;
+  background: #fff;
 }
 
 .app .sidebar .sidebar__content .sidebar__content__items::-webkit-scrollbar {
+  z-index: 2025;
   width: 20px;
 }
 
@@ -52,6 +57,7 @@
 
 .app .sidebar .sidebar__content .sidebar__content__items .section__sidebar .section__sidebar__items {
   position: relative;
+  background: #fff;
 }
 
 .app .sidebar .sidebar__content .sidebar__content__items .section__sidebar .section__sidebar__items .section__items {
@@ -125,7 +131,7 @@
 }
 
 .app .sidebar .sidebar__content .sidebar__content__items .section__sidebar .section__sidebar__items .section__items .items .item_link.active .item_title {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .app .sidebar .sidebar__content .sidebar__content__items .section__sidebar .section__sidebar__items .section__items .items .items-section {
@@ -419,7 +425,6 @@
 }
 
 .app .home-container {
-  overflow-x: auto;
   margin-left: 240px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -482,15 +487,15 @@
 }
 
 .app .home-container .home__main .home__two__column .home-content .home-grid .home-header {
-  width: 100%;
+  width: calc(100% - 240px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter {
-  width: 100%;
   height: 56px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,7 +504,8 @@
 .app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags {
   position: fixed;
   top: 56px;
-  width: 100%;
+  width: calc(100vw - 240px);
+  height: 56px;
   z-index: 2000;
   background-color: rgba(255, 255, 255, 0.98);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -507,23 +513,258 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .right-arrow {
+  right: 0;
+  position: absolute;
+  height: 100%;
+  z-index: 2030;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .right-arrow .right-arrow-button {
+  background-color: rgba(255, 255, 255, 0.98);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .right-arrow .right-arrow-button .button-arrow {
+  border-radius: 16px;
+  height: 32px;
+  margin: 12px 12px;
+  width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .right-arrow .right-arrow-button .button-arrow a {
+  color: inherit;
+  border-radius: inherit;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .right-arrow .right-arrow-button .button-arrow a .btn {
+  line-height: 1;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .right-arrow .right-arrow-button .button-arrow a .btn.btn-next {
+  color: inherit;
+  text-transform: inherit;
+  background-color: transparent;
+  vertical-align: middle;
+  color: inherit;
+  outline: none;
+  background: none;
+  margin: 0;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .right-arrow .right-arrow-button .button-arrow a .btn.btn-next .next-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  vertical-align: middle;
+  fill: #030303;
+  stroke: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 4px;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .right-arrow::before {
+  height: 100%;
+  width: 50px;
+  content: "";
+  pointer-events: none;
+  background: -webkit-gradient(linear, right top, left top, color-stop(20%, rgba(255, 255, 255, 0.98)), color-stop(80%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.98) 20%, rgba(255, 255, 255, 0) 80%);
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .left-arrow {
+  left: 0;
+  position: absolute;
+  height: 100%;
+  z-index: 2030;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .left-arrow .left-arrow-button {
+  background-color: rgba(255, 255, 255, 0.98);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .left-arrow .left-arrow-button .button-arrow {
+  border-radius: 16px;
+  height: 32px;
+  margin: 12px 12px;
+  width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .left-arrow .left-arrow-button .button-arrow a {
+  color: inherit;
+  border-radius: inherit;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .left-arrow .left-arrow-button .button-arrow a .btn {
+  line-height: 1;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .left-arrow .left-arrow-button .button-arrow a .btn.btn-left {
+  color: inherit;
+  text-transform: inherit;
+  background-color: transparent;
+  vertical-align: middle;
+  color: inherit;
+  outline: none;
+  background: none;
+  margin: 0;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .left-arrow .left-arrow-button .button-arrow a .btn.btn-left .left-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  vertical-align: middle;
+  fill: #030303;
+  stroke: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 4px;
+}
+
+.app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .left-arrow::after {
+  height: 100%;
+  width: 50px;
+  content: "";
+  pointer-events: none;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(255, 255, 255, 0.98)), color-stop(80%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.98) 20%, rgba(255, 255, 255, 0) 80%);
 }
 
 .app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .scroll-container {
-  position: relative;
   white-space: nowrap;
+  width: inherit;
   overflow: hidden;
 }
 
 .app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .scroll-container .tag {
-  display: inline-block;
-  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
 }
 
 .app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .scroll-container .tag .tag-item {
@@ -567,5 +808,6 @@
 .app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .scroll-container .tag .tag-item.active {
   background-color: #030303;
   color: white;
+  margin-left: 24px;
 }
 /*# sourceMappingURL=style.css.map */
