@@ -763,8 +763,10 @@
           align-items: center;
   position: absolute;
   left: 0;
-  -webkit-transition: 0.5s all ease-out;
-  transition: 0.5s all ease-out;
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 
 .app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .scroll-container .tag .tag-item {
@@ -808,6 +810,5 @@
 .app .home-container .home__main .home__two__column .home-content .home-grid .home-header .filter .filter-tags .scroll-container .tag .tag-item.active {
   background-color: #030303;
   color: white;
-  margin-left: 24px;
 }
 /*# sourceMappingURL=style.css.map */

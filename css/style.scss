@@ -575,7 +575,9 @@
                       align-items: center;
                       position: absolute;
                       left: 0;
-                      transition: 0.5s all ease-out;
+                      transition: 0.2s all ease-out;
+                      padding-right: 24px;
+                      padding-left: 24px;
                       .tag-item {
                         height: 32px;
                         min-width: 12px;
@@ -612,7 +614,6 @@
                         &.active {
                           background-color: #030303;
                           color: rgb(255, 255, 255);
-                          margin-left: 24px;
                         }
                       }
                     }
