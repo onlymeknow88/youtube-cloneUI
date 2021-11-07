@@ -60,8 +60,8 @@
   display: block;
 }
 .owl-carousel .owl-dot,
-.owl-carousel .owl-nav .owl-next,
-.owl-carousel .owl-nav .owl-prev {
+.owl-carousel .owl-nav-custom .right-arrow,
+.owl-carousel .owl-nav-custom.left-arrow{
   cursor: pointer;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -69,8 +69,8 @@
   -ms-user-select: none;
   user-select: none;
 }
-.owl-carousel .owl-nav button.owl-next,
-.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav div.right-arrow,
+.owl-carousel .owl-nav div.left-arrow,
 .owl-carousel button.owl-dot {
   background: 0 0;
   color: inherit;
